@@ -1,15 +1,41 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import entities.Chiamata;
+import entities.Rettangolo;
+import entities.SIM;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        rectangleExercises();
+        simExercise();
+    }
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+    public static void rectangleExercises() {
+        Rettangolo rectangle1 = new Rettangolo(4, 5);
+        Rettangolo rectangle2 = new Rettangolo(6, 10);
+
+        stampaDueRettangoli(rectangle1, rectangle2);
+    }
+
+    public static void stampaDueRettangoli(Rettangolo rectangle1, Rettangolo rectangle2) {
+        System.out.println("___________________________________________________");
+        rectangle1.printPerimetroAndAreaRettangolo();
+        rectangle2.printPerimetroAndAreaRettangolo();
+
+        double sommePerimetri = rectangle1.perimetroRettangolo() + rectangle2.perimetroRettangolo();
+        double sommeAree = rectangle1.areaRettangolo() + rectangle2.areaRettangolo();
+
+        System.out.println("___________________________________________________");
+        System.out.println("La somma dei PERIMETRI dei rettangoli è: " + sommePerimetri);
+        System.out.println("La somma delle AREE dei rettangoli è: " + sommeAree);
+    }
+
+    public static void simExercise() {
+        System.out.println("___________________________________________________");
+        SIM mySIM = new SIM("3391234567");
+        mySIM.addCall(new Chiamata("3387777666", 4));
+        mySIM.addCall(new Chiamata("3387767994", 1));
+        mySIM.addCall(new Chiamata("3442394723", 3));
+        mySIM.addCall(new Chiamata("3453864848", 2));
+        mySIM.addCall(new Chiamata("3883175732", 1));
+        mySIM.getSIMData();
     }
 }
