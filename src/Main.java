@@ -31,11 +31,15 @@ public class Main {
     public static void simExercise() {
         System.out.println("___________________________________________________");
         SIM mySIM = new SIM("3391234567");
-        mySIM.addCall(new Chiamata("3387777666", 4));
-        mySIM.addCall(new Chiamata("3387767994", 1));
-        mySIM.addCall(new Chiamata("3442394723", 3));
-        mySIM.addCall(new Chiamata("3453864848", 2));
-        mySIM.addCall(new Chiamata("3883175732", 1));
+
+        Chiamata[] arrayOfCalls = {
+                new Chiamata("3387777666", 4),
+                new Chiamata("3387777666", 4),
+                new Chiamata("3387777666", 4),
+                new Chiamata("3387777666", 4),
+                new Chiamata("3387777666", 4),
+        };
+        mySIM.setCall(arrayOfCalls);
         mySIM.getSIMData();
     }
 }
