@@ -25,17 +25,6 @@ public class SIM {
         System.out.println("Ultime chiamate effettuate:" + Arrays.toString(dialledCalls));
     }
 
-    // Internet & IA help for this part of the code:
-
-//    public void addCall(Chiamata newCall) {
-//        for (int i = 0; i < dialledCalls.length; i++) {
-//            if (dialledCalls[i] == null) {
-//                dialledCalls[i] = newCall;
-//                return;
-//            }
-//        }
-//    }
-
     public void setCall(Chiamata[] calls) {
         this.dialledCalls = calls;
     }
